@@ -37,6 +37,7 @@ metadata {
 		fingerprint mfr: "0258", prod: "0003", model: "1088", deviceJoinName: "NEO Coolcam Siren Alarm"
 		//zw:Fs type:1005 mfr:0129 prod:6F01 model:0001 ver:1.04 zwv:4.33 lib:03 cc:5E,80,5A,72,73,86,70,98 sec:59,2B,71,85,25,7A role:07 ff:8F00 ui:8F00
 		fingerprint mfr: "0129", prod: "6F01", model: "0001", deviceJoinName: "Yale External Siren"
+		fingerprint mfr: "0060", prod: "000C", model: "0002", deviceJoinName: "Everspring Outdoor Solar Siren"
 	}
 
 	simulator {
@@ -68,11 +69,11 @@ metadata {
 
 		// Yale siren only
 		preferences {
-			input name: "alarmLength", type: "number", title: "Alarm length (1-10 min)", range: "1..10"
+			input name: "alarmLength", type: "number", title: "Alarm length", range: "1..10"
 			// defaultValue: 10
 			input name: "alarmLEDflash", type: "bool", title: "Alarm LED flash"
 			// defaultValue: false
-			input name: "comfortLED", type: "number", title: "Comfort LED (0-25 x 10 sec.)", range: "0..25"
+			input name: "comfortLED", type: "number", title: "Comfort LED (x10 sec.)", range: "0..25"
 			// defaultValue: 0
 			input name: "tamper", type: "bool", title: "Tamper alert"
 			// defaultValue: false
